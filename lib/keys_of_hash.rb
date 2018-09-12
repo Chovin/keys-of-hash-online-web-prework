@@ -2,7 +2,8 @@ class Hash
   def keys_of(*values)
     keys = []
     values.each do |value|
-      keys << self.key(value) if self.value? value
+      key = self.key(value)
+      keys << key if key
     end
     keys
   end
