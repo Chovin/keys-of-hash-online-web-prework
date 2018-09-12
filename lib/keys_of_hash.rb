@@ -4,5 +4,6 @@ class Hash
     values.each do |value|
       keys << self.key(value) if self.value? value
     end
+    keys
   end
 end
