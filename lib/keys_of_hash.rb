@@ -2,8 +2,7 @@ class Hash
   def keys_of(*values)
     keys = []
     values.each do |value|
-      key = self.key(value)
-      keys << key if key
+      keys.concat self.select {|k, v| v == value}.keys
     end
     keys
   end
